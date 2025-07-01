@@ -1,0 +1,8 @@
+.main-content-container {
+    --line-color: #ffffff07;
+    --line-size: 20px;
+    background: linear-gradient(90deg, var(--line-color) 1px, transparent 1px) 0
+            0 / var(--line-size) var(--line-size),
+        linear-gradient(var(--line-color) 1px, transparent 1px) 0 0 /
+            var(--line-size) var(--line-size);
+}

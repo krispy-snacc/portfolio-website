@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Rust CLI Tool",
+        "description": "A fast, memory-safe command-line tool built with Rust for parsing large logs.",
+        "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Rust_programming_language_black_logo.svg",
+        "srcUrl": "https://github.com/yourname/rust-cli",
+        "langs": [{ "name": "Rust", "color": "#dea584" }]
+    },
+    {
+        "title": "React Portfolio",
+        "description": "Personal portfolio built with React and Tailwind CSS, showcasing frontend projects.",
+        "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+        "srcUrl": "https://yourportfolio.com",
+        "langs": [
+            { "name": "React", "color": "#61dafb" },
+            { "name": "Tailwind", "color": "#38bdf8" },
+            { "name": "TypeScript", "color": "#3178c6" }
+        ]
+    },
+    {
+        "title": "Fullstack Chat App",
+        "description": "Realtime chat app using WebSockets, built with Node.js and Vue.",
+        "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
+        "srcUrl": "https://github.com/yourname/chat-app",
+        "langs": [
+            { "name": "Node.js", "color": "#3c873a" },
+            { "name": "Vue", "color": "#42b883" },
+            { "name": "Socket.io", "color": "#010101" }
+        ]
+    },
+    {
+        "title": "Python API",
+        "description": "A RESTful API for managing tasks, built using FastAPI and PostgreSQL.",
+        "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+        "srcUrl": "https://github.com/yourname/python-api",
+        "langs": [
+            { "name": "Python", "color": "#3572A5" },
+            { "name": "FastAPI", "color": "#009688" },
+            { "name": "PostgreSQL", "color": "#336791" }
+        ]
+    }
+]
