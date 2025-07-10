@@ -1,4 +1,5 @@
 const ContactSection = () => {
+    const dateYear = new Date().getFullYear();
     return (
         <footer
             id="contact"
@@ -18,18 +19,13 @@ const ContactSection = () => {
                         <div className="px-6 py-4">
                             <a href="#">Github</a>
                         </div>
-                        <div className="px-6 py-4">
-                            <a href="#">Github</a>
-                        </div>
-                        <div className="px-6 py-4">
-                            <a href="#">Github</a>
-                        </div>
-                        <div className="px-6 py-4">
-                            <a href="#">Github</a>
-                        </div>
                     </div>
                     <div className="w-full text-xs">
-                        @2048 Krispy Snacc. All Rights Reserved.
+                        <p>
+                            <span className="font-serif">&copy;</span>
+                            <span id="year">{dateYear} </span>
+                            Kris. All Rights Reserved.
+                        </p>
                     </div>
                 </div>
             </div>

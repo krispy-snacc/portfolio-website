@@ -32,7 +32,7 @@ type Lang = {
 type ProjectData = {
     title: string;
     description: string;
-    imgSrc: string;
+    img: string;
     srcUrl: string;
     langs: Lang[];
 };
@@ -40,30 +40,31 @@ type ProjectData = {
 const Project = ({
     title,
     description,
-    imgsrc,
+    img,
     srcUrl,
     children,
 }: {
     title: string;
     description: string;
-    imgsrc: string;
+    img: string;
     srcUrl: string;
     children: React.ReactNode;
 }) => {
+    const imgSrc = `${import.meta.env.BASE_URL}project-icons/${img}`;
     return (
         <div className="overflow-clip min-h-[512px] lg:w-[420px] w-full  border-[1px] border-white/20 transition-colors duration-200 hover:border-white/50 bg-black/40 flex flex-col rounded-lg">
             <div className="relative overflow-hidden w-full aspect-[7/3] xl:h-auto border-b xl:border-r border-white/20 border-[1px]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#252525] to-[#171717]" />
 
                 <img
-                    src={imgsrc}
+                    src={imgSrc}
                     alt=""
                     aria-hidden
                     className="absolute inset-0 h-full w-full object-cover blur-sm scale-100 brightness-50"
                     style={{ willChange: "transform, filter" }}
                 />
                 <img
-                    src={imgsrc}
+                    src={imgSrc}
                     className="absolute h-full w-full object-cover"
                 />
             </div>
@@ -77,7 +78,7 @@ const Project = ({
                 <div className="grow w-full flex">
                     <a
                         href={srcUrl}
-                        className="text-sm border-[#535bf2] border-[2px] h-fit px-12 py-3 rounded-full mt-auto"
+                        className="text-sm w-44 shrink-0 border-[#535bf2] border-[2px] h-fit px-6 py-4 hover:bg-hover/95 hover:!text-white rounded-full mt-auto"
                     >
                         Source Code ↗
                     </a>
@@ -104,7 +105,7 @@ const ProjectsSection = () => {
                         <Project
                             key={i}
                             title={item.title}
-                            imgsrc={item.imgSrc}
+                            img={item.img}
                             srcUrl={item.srcUrl}
                             description={item.description}
                         >

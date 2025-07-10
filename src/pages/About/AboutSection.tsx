@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import pfp from "../../assets/profilepic.jpg";
 
 const AboutInfo = () => {
     return (
@@ -9,21 +8,21 @@ const AboutInfo = () => {
                     Hi! I'm Kris
                 </h2>
                 <p className="text-lg text-gray-400 leading-relaxed max-w-3xl">
-                    I'm a passionate front-end developer with a strong
-                    foundation in modern web technologies like React,
-                    TypeScript, and Tailwind CSS. I enjoy building clean,
-                    performant, and accessible user interfaces with a focus on
-                    user experience and responsive design.
+                    I'm a developer who loves figuring out how things work under
+                    the hood and making them look cool on screen. Systems and
+                    graphics programming are my main playgrounds, but I hop into
+                    web dev when needed and enjoy connecting all the pieces into
+                    something that just feels right.
                 </p>
             </div>
         </div>
     );
 };
 
-const AboutProfilePic = () => {
+const AboutProfilePic = ({ imgSrc }: { imgSrc: string }) => {
     let amp = 14;
     return (
-        <div className="w-full xl:h-full xl:w-[50%] xl:border-l flex items-center justify-center border-white/20 py-8">
+        <div className="w-full xl:h-full xl:w-[50%] xl:border-l flex flex-col items-center justify-center border-white/20 py-8">
             <motion.div
                 animate={{ y: [amp, -amp, amp] }}
                 transition={{
@@ -31,15 +30,29 @@ const AboutProfilePic = () => {
                     ease: "easeInOut",
                     repeat: Infinity,
                 }}
-                className="transition-transform ease-in-out relative max-h-[512px] h-[80%] xl:h-[67%] min-h-[320px] aspect-[3/4] overflow-hidden rounded-lg"
+                className="transition-transform ease-in-out relative overflow-hidden rounded-lg"
             >
                 <img
-                    className="h-full w-full absolute object-center object-cover"
+                    className="h-auto w-auto max-h-[320px] xl:h-[67%] min-h-[320px] object-center object-contain"
                     // style={{ filter: "grayscale(100%) contrast(120%)" }}
-                    src={pfp}
+                    src={imgSrc}
                     alt="Profile Picture"
                 />
             </motion.div>
+            <div
+                className="text-[.5rem] text-white/50 relative"
+                style={{ top: `${amp}px` }}
+            >
+                Artwork by{" "}
+                <a
+                    className="!text-white/80 hover:!text-hover"
+                    target="_blank"
+                    href="https://x.com/cherrymaru8/status/1934601675773530524/photo/1"
+                >
+                    @cherrymaru8
+                </a>{" "}
+                on x
+            </div>
         </div>
     );
 };
@@ -52,7 +65,10 @@ const AboutSection = () => {
         >
             <div className="h-full w-full xl:h-full max-w-[min(1680px,100%)] flex flex-col xl:flex-row">
                 <AboutInfo />
-                <AboutProfilePic />
+                {/* Placeholder Profile Pic ig? */}
+                <AboutProfilePic
+                    imgSrc={`${import.meta.env.BASE_URL}profilepic.png`}
+                />
             </div>
         </section>
     );

@@ -4,7 +4,7 @@ import { useSlidePanel, SlidePanelProvider } from "./SlidePanelContext";
 import NavToggleClose from "../assets/Icons/HamburgToggleClose.svg?react";
 import NavToggleOpen from "../assets/Icons/HamburgToggleOpen.svg?react";
 import GithubIcon from "../assets/Icons/contact/github.svg?react";
-import LinkedinIcon from "../assets/Icons/contact/linkedin.svg?react";
+// import LinkedinIcon from "../assets/Icons/contact/linkedin.svg?react";
 
 const Logo = () => {
     return (
@@ -102,12 +102,12 @@ const Contacts = () => {
                 >
                     <GithubIcon className="h-full w-full" />
                 </ContactIcon>
-                <ContactIcon
+                {/* <ContactIcon
                     href="https://github.com/krispy-snacc"
                     name="LinkedIn"
                 >
                     <LinkedinIcon className="h-full w-full" />
-                </ContactIcon>
+                </ContactIcon> */}
             </div>
         </div>
     );

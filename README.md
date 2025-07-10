@@ -2,8 +2,6 @@
 
 A modern, fast, and minimal developer portfolio built with [React](https://reactjs.org/), [Vite](https://vitejs.dev/), [Tailwind CSS](https://tailwindcss.com/), and [Framer Motion](https://www.framer.com/motion/).
 
-> 📦 **Source code is private.** Only the compiled output is deployed publicly via GitHub Pages.
-
 ---
 
 ## 🚀 Tech Stack
