@@ -17,7 +17,20 @@ const ContactSection = () => {
                     </div>
                     <div className="w-full flex items-center flex-wrap justify-around text-lg mb-8">
                         <div className="px-6 py-4">
-                            <a href="#">Github</a>
+                            <a
+                                href="https://github.com/krispy-snacc"
+                                target="_blank"
+                            >
+                                Github
+                            </a>
+                        </div>
+                        <div className="px-6 py-4">
+                            <a
+                                href="https://ko-fi.com/krispysnacc"
+                                target="_blank"
+                            >
+                                Ko-fi
+                            </a>
                         </div>
                     </div>
                     <div className="w-full text-xs">

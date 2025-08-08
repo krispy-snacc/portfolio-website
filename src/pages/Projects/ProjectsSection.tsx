@@ -78,6 +78,7 @@ const Project = ({
                 <div className="grow w-full flex">
                     <a
                         href={srcUrl}
+                        target="_blank"
                         className="text-sm w-44 shrink-0 border-[#535bf2] border-[2px] h-fit px-6 py-4 hover:bg-hover/95 hover:!text-white rounded-full mt-auto"
                     >
                         Source Code ↗

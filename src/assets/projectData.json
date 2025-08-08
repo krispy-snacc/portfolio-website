@@ -1,5 +1,22 @@
 [
     {
+        "title": "C++ Ray Tracer",
+        "description": "A basic ray tracer built in C++, capable of rendering spheres with shadows, reflections, and diffuse lighting.",
+        "img": "cpp-ray-tracer.png",
+        "srcUrl": "https://github.com/krispy-snacc/cpp-ray-tracer",
+        "langs": [{ "name": "C++", "color": "#f34b7d" }]
+    },
+    {
+        "title": "effects-rs",
+        "description": "A Rust tool that applies custom OpenCL (.cl) effects to input images, producing GPU-accelerated processed outputs.",
+        "img": "effects-rs.png",
+        "srcUrl": "https://github.com/krispy-snacc/effects-rs",
+        "langs": [
+            { "name": "Rust", "color": "#dea584" },
+            { "name": "OpenCL", "color": "#edb44b" }
+        ]
+    },
+    {
         "title": "CPP OpenGL Renderer",
         "description": "A 3D rendering engine in C++ using OpenGL, featuring basic lighting, shaders, and camera controls.",
         "img": "cpp-opengl-renderer.png",
@@ -10,6 +27,16 @@
         ]
     },
     {
+        "title": "Crimbo Bot",
+        "description": "A general purpose discord bot made in python with GPU-accelerated image processing, supporting customizable image manipulation within Discord servers.",
+        "img": "crimbo.png",
+        "srcUrl": "https://github.com/krispy-snacc/crimbo",
+        "langs": [
+            { "name": "Python", "color": "#3776ab" },
+            { "name": "OpenCL", "color": "#edb44b" }
+        ]
+    },
+    {
         "title": "Go BitTorrent Client",
         "description": "A BitTorrent client written in Go, implementing the protocol from scratch with support for peer discovery and file downloading.",
         "img": "go-bittorrent-client.png",
@@ -17,11 +44,11 @@
         "langs": [{ "name": "Go", "color": "#00ADD8" }]
     },
     {
-        "title": "C++ Ray Tracer",
-        "description": "A basic ray tracer built in C++, capable of rendering spheres with shadows, reflections, and diffuse lighting.",
-        "img": "cpp-ray-tracer.png",
-        "srcUrl": "https://github.com/krispy-snacc/cpp-ray-tracer",
-        "langs": [{ "name": "C++", "color": "#f34b7d" }]
+        "title": "Nes-rs",
+        "description": "A NES emulator written in Rust. It (will) include CPU, PPU, and APU emulation, with support for classic NES ROMs.",
+        "img": "nes-rs.png",
+        "srcUrl": "https://github.com/krispy-snacc/nes-rs",
+        "langs": [{ "name": "Rust", "color": "#dea584" }]
     },
     {
         "title": "Rust Web Server",
