@@ -12,7 +12,7 @@ const AboutInfo = () => {
                     the hood and making them look cool on screen. Systems and
                     graphics programming are my main playgrounds, but I hop into
                     web dev when needed and enjoy connecting all the pieces into
-                    something that just feels right. Hello there :)
+                    something that just feels right.
                 </p>
             </div>
         </div>
