@@ -16,7 +16,7 @@ const TechArtCard = ({ title, media, srcUrl }: TechArtData) => {
 
     // const imgSrc = `${import.meta.env.BASE_URL}project-icons/${img}`;
     return (
-        <div className="overflow-clip min-h-[256px] w-[420px] border-[1px] border-white/20 transition-colors duration-200 hover:border-white/50 bg-black/40 flex flex-col rounded-lg">
+        <div className="overflow-clip h-full w-[420px] border-[1px] border-white/20 transition-colors duration-200 hover:border-white/50 bg-black/40 flex flex-col rounded-lg">
             <div className="relative overflow-hidden w-full aspect-[16/9] xl:h-auto border-b xl:border-r border-white/20 border-[1px]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#252525] to-[#171717]" />
 
@@ -81,7 +81,7 @@ const TechArtSection = () => {
                 <h2 className="w-full h-18 mb-6 text-4xl flex items-center">
                     Tech Arts
                 </h2>
-                <div className="h-full w-full flex flex-wrap gap-24 items-center justify-center">
+                <div className="h-full w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-24 place-items-center">
                     {(siteData["techarts"] as TechArtData[]).map((item, i) => (
                         <TechArtCard
                             key={i}

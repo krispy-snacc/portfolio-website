@@ -47,13 +47,8 @@
     },
     "techarts": [
         {
-            "title": "Shader Experiment 1",
-            "media": "https://www.shadertoy.com/embed/4d3GW7?gui=false&t=10&paused=false&muted=true",
-            "srcUrl": "https://www.shadertoy.com/view/4d3GW7"
-        },
-        {
-            "title": "Compute Toy Effect",
-            "media": "https://compute.toys/embed/2386"
+            "title": "WIP",
+            "media": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTJkYW5kY2I5dHBid3NxZDdib2FqbXc0dzlzdGd6dnk2cTZnc3k0eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CdhxVrdRN4YFi/giphy.gif"
         }
     ],
     "projects": [

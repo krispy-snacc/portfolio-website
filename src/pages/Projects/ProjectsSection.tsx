@@ -52,7 +52,7 @@ const ProjectCard = ({
 }) => {
     const imgSrc = `${import.meta.env.BASE_URL}project-icons/${img}`;
     return (
-        <div className="overflow-clip min-h-[512px] lg:w-[420px] w-full  border-[1px] border-white/20 transition-colors duration-200 hover:border-white/50 bg-black/40 flex flex-col rounded-lg">
+        <div className="overflow-clip h-full lg:w-[420px] w-full  border-[1px] border-white/20 transition-colors duration-200 hover:border-white/50 bg-black/40 flex flex-col rounded-lg">
             <div className="relative overflow-hidden w-full aspect-[7/3] xl:h-auto border-b xl:border-r border-white/20 border-[1px]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#252525] to-[#171717]" />
 
@@ -101,7 +101,7 @@ const ProjectsSection = () => {
                 <h2 className="w-full h-18 mb-6 text-4xl flex items-center">
                     Projects
                 </h2>
-                <div className="h-full w-full flex flex-wrap gap-24 items-center justify-center">
+                <div className="h-full w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-24 place-items-center">
                     {(siteData["projects"] as ProjectData[]).map((item, i) => (
                         <ProjectCard
                             key={i}
