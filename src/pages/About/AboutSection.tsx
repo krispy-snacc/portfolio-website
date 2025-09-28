@@ -33,7 +33,7 @@ const AboutProfilePic = ({ imgSrc }: { imgSrc: string }) => {
                 className="transition-transform ease-in-out relative overflow-hidden rounded-lg"
             >
                 <img
-                    className="h-auto w-auto max-h-[320px] xl:h-[67%] min-h-[320px] object-center object-contain"
+                    className="h-auto w-auto max-h-[512px] xl:h-[88%] min-h-[512px] object-center object-contain"
                     // style={{ filter: "grayscale(100%) contrast(120%)" }}
                     src={imgSrc}
                     alt="Profile Picture"

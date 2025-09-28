@@ -35,15 +35,6 @@ a:hover {
     color: var(--color-hover);
 }
 
-/* 
-body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
-} */
-
 h1 {
     font-size: 3.2em;
     line-height: 1.1;
@@ -55,9 +46,6 @@ button {
     transition: border-color 0.25s;
 }
 
-/* button:hover > svg > rect {
-    fill: #646cff;
-} */
 button:focus,
 button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;

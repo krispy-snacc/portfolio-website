@@ -1,7 +1,7 @@
 import React from "react";
 import { useLenisHashScroll } from "../../hooks/useLenisHashScroll";
 
-import projectData from "../../assets/projectData.json";
+import siteData from "../../assets/sitedata.json";
 
 const TechLabel = ({ title, color }: { title: string; color: string }) => {
     return (
@@ -37,7 +37,7 @@ type ProjectData = {
     langs: Lang[];
 };
 
-const Project = ({
+const ProjectCard = ({
     title,
     description,
     img,
@@ -102,8 +102,8 @@ const ProjectsSection = () => {
                     Projects
                 </h2>
                 <div className="h-full w-full flex flex-wrap gap-24 items-center justify-center">
-                    {(projectData as ProjectData[]).map((item, i) => (
-                        <Project
+                    {(siteData["projects"] as ProjectData[]).map((item, i) => (
+                        <ProjectCard
                             key={i}
                             title={item.title}
                             img={item.img}
@@ -113,7 +113,7 @@ const ProjectsSection = () => {
                             {item.langs?.map((l) => (
                                 <TechLabel title={l.name} color={l.color} />
                             ))}
-                        </Project>
+                        </ProjectCard>
                     ))}
                 </div>
             </div>

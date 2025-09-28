@@ -1,0 +1,85 @@
+{
+    "techarts": [
+        {
+            "title": "Shader Experiment 1",
+            "media": "https://www.shadertoy.com/embed/4d3GW7?gui=false&t=10&paused=false&muted=true",
+            "srcUrl": "https://www.shadertoy.com/view/4d3GW7"
+        },
+        {
+            "title": "Compute Toy Effect",
+            "media": "https://compute.toys/embed/2386"
+        }
+    ],
+
+    "projects": [
+        {
+            "title": "C++ Ray Tracer",
+            "description": "A basic ray tracer built in C++, capable of rendering spheres with shadows, reflections, and diffuse lighting.",
+            "img": "cpp-ray-tracer.png",
+            "srcUrl": "https://github.com/krispy-snacc/cpp-ray-tracer",
+            "langs": [{ "name": "C++", "color": "#f34b7d" }]
+        },
+        {
+            "title": "effects-rs",
+            "description": "A GPU-accelerated image effects tool powered by wgpu. It lets apply effects written in WGSL or SPIR-V to an image.",
+            "img": "effects-rs.png",
+            "srcUrl": "https://github.com/krispy-snacc/effects-rs",
+            "langs": [
+                { "name": "Rust", "color": "#dea584" },
+                { "name": "OpenCL", "color": "#edb44b" }
+            ]
+        },
+        {
+            "title": "CPP OpenGL Renderer",
+            "description": "A 3D rendering engine in C++ using OpenGL, featuring basic lighting, shaders, and camera controls.",
+            "img": "cpp-opengl-renderer.png",
+            "srcUrl": "https://github.com/krispy-snacc/cpp-opengl-renderer",
+            "langs": [
+                { "name": "C++", "color": "#f34b7d" },
+                { "name": "OpenGL", "color": "#5586A4" }
+            ]
+        },
+        {
+            "title": "Crimbo Bot",
+            "description": "A general purpose discord bot made in python with GPU-accelerated image processing, supporting customizable image manipulation within Discord servers.",
+            "img": "crimbo.png",
+            "srcUrl": "https://github.com/krispy-snacc/crimbo",
+            "langs": [
+                { "name": "Python", "color": "#3776ab" },
+                { "name": "OpenCL", "color": "#edb44b" }
+            ]
+        },
+        {
+            "title": "Go BitTorrent Client",
+            "description": "A BitTorrent client written in Go, implementing the protocol from scratch with support for peer discovery and file downloading.",
+            "img": "go-bittorrent-client.png",
+            "srcUrl": "https://github.com/krispy-snacc/go-bittorrent-client",
+            "langs": [{ "name": "Go", "color": "#00ADD8" }]
+        },
+        {
+            "title": "Nes-rs",
+            "description": "A NES emulator written in Rust. It (will) include CPU, PPU, and APU emulation, with support for classic NES ROMs.",
+            "img": "nes-rs.png",
+            "srcUrl": "https://github.com/krispy-snacc/nes-rs",
+            "langs": [{ "name": "Rust", "color": "#dea584" }]
+        },
+        {
+            "title": "Rust Web Server",
+            "description": "A lightweight multithreaded HTTP web server written in Rust, built for learning systems-level and network programming.",
+            "img": "rust-web-server.png",
+            "srcUrl": "https://github.com/krispy-snacc/rust-web-server",
+            "langs": [{ "name": "Rust", "color": "#dea584" }]
+        },
+        {
+            "title": "Personal Portfolio",
+            "description": "My developer portfolio built with React, Vite, and Tailwind CSS, featuring smooth animations, custom UI components, and a clean structure for easy customization.",
+            "img": "personal-portfolio.png",
+            "srcUrl": "https://github.com/krispy-snacc/portfolio-website",
+            "langs": [
+                { "name": "TypeScript", "color": "#3178c6" },
+                { "name": "React", "color": "#61dafb" },
+                { "name": "Tailwind CSS", "color": "#38bdf8" }
+            ]
+        }
+    ]
+}

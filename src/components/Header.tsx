@@ -143,6 +143,7 @@ const SlidePanel = () => {
                 <MobileNavbar>
                     <MobileNavLink name="About" href="#about" />
                     <MobileNavLink name="Skills" href="#skills" />
+                    <MobileNavLink name="Tech Art" href="#techart" />
                     <MobileNavLink name="Projects" href="#projects" />
                     <MobileNavLink name="Contact" href="#contact" />
                 </MobileNavbar>
@@ -161,6 +162,7 @@ const Header = () => {
                     <Navbar>
                         <NavLink name="About" href="#about" />
                         <NavLink name="Skills" href="#skills" />
+                        <NavLink name="Tech Art" href="#techart" />
                         <NavLink name="Projects" href="#projects" />
                         <NavLink name="Contact" href="#contact" />
                     </Navbar>

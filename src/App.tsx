@@ -6,6 +6,7 @@ import AboutSection from "./pages/About/AboutSection";
 import ProjectsSection from "./pages/Projects/ProjectsSection";
 import SkillsSection from "./pages/Skills/SkillsSection";
 import ContactSection from "./pages/Contact/ContactSection";
+import TechArtSection from "./pages/TechArt/TechArtSection";
 
 function App() {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -17,13 +18,14 @@ function App() {
 
     return (
         <div
-            className="w-screen font-DepartureMono"
+            className="w-full font-DepartureMono"
             onMouseMove={handlePointerMove}
         >
             <Header />
             <Content>
                 <AboutSection />
                 <SkillsSection />
+                <TechArtSection />
                 <ProjectsSection />
                 <ContactSection />
             </Content>
