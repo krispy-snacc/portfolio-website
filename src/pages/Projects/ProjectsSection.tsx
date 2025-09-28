@@ -95,7 +95,7 @@ const ProjectsSection = () => {
     return (
         <section
             id="projects"
-            className="flex flex-col grow border-b-1 border-white/20 w-full items-center justify-center px-4 xl:px-12 py-8 pb-24"
+            className="min-h-screen flex flex-col grow border-b-1 border-white/20 w-full items-center px-4 xl:px-12 py-8 pb-24"
         >
             <div className="h-full w-full max-w-[min(1680px,100%)] flex flex-col">
                 <h2 className="w-full h-18 mb-6 text-4xl flex items-center">

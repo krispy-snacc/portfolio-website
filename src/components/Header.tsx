@@ -1,34 +1,48 @@
 import { motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 import clsx from "clsx";
 import { useSlidePanel, SlidePanelProvider } from "./SlidePanelContext";
 import NavToggleClose from "../assets/Icons/HamburgToggleClose.svg?react";
 import NavToggleOpen from "../assets/Icons/HamburgToggleOpen.svg?react";
 import GithubIcon from "../assets/Icons/contact/github.svg?react";
 import KofiIcon from "../assets/Icons/contact/kofi.svg?react";
+import LinkedinIcon from "../assets/Icons/contact/linkedin.svg?react";
+import EmailIcon from "../assets/Icons/contact/email.svg?react";
+import sitedata from "../assets/sitedata.json";
 
 const Logo = () => {
     return (
         <div className="h-full flex-1 xl:flex-none border-r-[1px] xl:border-none border-white/20 xl:w-[200px] flex justify-start items-center">
-            <a
+            <Link
                 id="logo"
-                href="/"
+                to="/"
                 className="h-full flex items-center justify-center px-4"
             >
                 <span className="text-4xl">Kris</span>
-            </a>
+            </Link>
         </div>
     );
 };
 
-const NavLink = ({ name, href }: { name: string; href: string }) => {
+const NavLink = ({ name, to }: { name: string; to: string }) => {
+    const location = useLocation();
+    const isActive = location.pathname === to;
+
     return (
-        <li className="h-full w-full flex items-center justify-center grow text-white text-xl">
-            <a
-                className="h-full px-4 flex items-center justify-center"
-                href={href}
+        <li
+            className={clsx(
+                "h-full w-full flex items-center justify-center grow text-white text-xl transition-colors",
+                isActive
+                    ? "bg-white/10 text-white"
+                    : "text-white hover:bg-white/5"
+            )}
+        >
+            <Link
+                className="h-full px-4 flex items-center justify-center w-full"
+                to={to}
             >
                 {name}
-            </a>
+            </Link>
         </li>
     );
 };
@@ -46,17 +60,27 @@ const Navbar = ({ children }: { children: React.ReactNode }) => {
     );
 };
 
-const MobileNavLink = ({ name, href }: { name: string; href: string }) => {
+const MobileNavLink = ({ name, to }: { name: string; to: string }) => {
+    const location = useLocation();
+    const isActive = location.pathname === to;
     const { togglePanel } = useSlidePanel();
+
     return (
-        <li className="max-h-24 h-full w-full flex items-center grow text-white text-xl border-b-[1px] border-white/20">
-            <a
+        <li
+            className={clsx(
+                "max-h-24 h-full w-full flex items-center grow text-white text-xl border-b-[1px] border-white/20 transition-colors",
+                isActive
+                    ? "bg-white/10 text-white"
+                    : "text-white hover:bg-white/5"
+            )}
+        >
+            <Link
                 className="w-full px-8 flex justify-start items-center py-4"
-                href={href}
+                to={to}
                 onClick={togglePanel}
             >
                 {name}
-            </a>
+            </Link>
         </li>
     );
 };
@@ -89,22 +113,44 @@ const ContactIcon = ({
     );
 };
 
+// Helper function to get the icon component based on icon name
+const getIconComponent = (iconName: string) => {
+    switch (iconName.toLowerCase()) {
+        case "github":
+            return GithubIcon;
+        case "kofi":
+        case "ko-fi":
+            return KofiIcon;
+        case "linkedin":
+            return LinkedinIcon;
+        case "email":
+            return EmailIcon;
+        default:
+            return GithubIcon; // fallback
+    }
+};
+
 const Contacts = () => {
+    const socialLinks = sitedata.about.socialLinks;
+
     return (
         <div
             id="contact-icons"
             className="hidden xl:flex justify-center items-center h-full w-[200px] py-6 px-3"
         >
             <div className="w-full h-full flex gap-1 items-center justify-center">
-                <ContactIcon
-                    href="https://github.com/krispy-snacc"
-                    name="Github"
-                >
-                    <GithubIcon className="h-full w-full" />
-                </ContactIcon>
-                <ContactIcon href="https://ko-fi.com/krispysnacc" name="Ko-fi">
-                    <KofiIcon className="h-full w-full" />
-                </ContactIcon>
+                {socialLinks.map((link) => {
+                    const IconComponent = getIconComponent(link.icon);
+                    return (
+                        <ContactIcon
+                            key={link.name}
+                            href={link.url}
+                            name={link.name}
+                        >
+                            <IconComponent className="h-full w-full" />
+                        </ContactIcon>
+                    );
+                })}
             </div>
         </div>
     );
@@ -130,6 +176,35 @@ const NavButton = () => {
     );
 };
 
+const MobileContacts = () => {
+    const socialLinks = sitedata.about.socialLinks;
+    const { togglePanel } = useSlidePanel();
+
+    return (
+        <div className="w-full px-8 py-6 border-t-[1px] border-white/20">
+            <h3 className="text-white text-lg mb-4">Connect</h3>
+            <div className="flex gap-4 items-center">
+                {socialLinks.map((link) => {
+                    const IconComponent = getIconComponent(link.icon);
+                    return (
+                        <a
+                            key={link.name}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="aspect-square h-12 flex items-center justify-center hover:bg-white/10 rounded-md transition-colors"
+                            title={link.name}
+                            onClick={togglePanel}
+                        >
+                            <IconComponent className="w-[80%] h-[80%]" />
+                        </a>
+                    );
+                })}
+            </div>
+        </div>
+    );
+};
+
 const SlidePanel = () => {
     const { isOpen } = useSlidePanel();
     return (
@@ -139,14 +214,14 @@ const SlidePanel = () => {
             animate={{ y: isOpen ? "0%" : "-100%" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-            <div className="h-full w-full pt-[80px] pb-[64px]">
+            <div className="h-full w-full pt-[80px] flex flex-col">
                 <MobileNavbar>
-                    <MobileNavLink name="About" href="#about" />
-                    <MobileNavLink name="Skills" href="#skills" />
-                    <MobileNavLink name="Tech Art" href="#techart" />
-                    <MobileNavLink name="Projects" href="#projects" />
-                    <MobileNavLink name="Contact" href="#contact" />
+                    <MobileNavLink name="About" to="/about" />
+                    <MobileNavLink name="Skills" to="/skills" />
+                    <MobileNavLink name="Tech Art" to="/techart" />
+                    <MobileNavLink name="Projects" to="/projects" />
                 </MobileNavbar>
+                <MobileContacts />
             </div>
         </motion.div>
     );
@@ -160,11 +235,10 @@ const Header = () => {
                 <div className="w-full max-w-[min(1680px,100%)] mx-auto h-full outline-x-[1px] border-white/20 flex items-center backdrop-blur-xs">
                     <Logo />
                     <Navbar>
-                        <NavLink name="About" href="#about" />
-                        <NavLink name="Skills" href="#skills" />
-                        <NavLink name="Tech Art" href="#techart" />
-                        <NavLink name="Projects" href="#projects" />
-                        <NavLink name="Contact" href="#contact" />
+                        <NavLink name="About" to="/about" />
+                        <NavLink name="Skills" to="/skills" />
+                        <NavLink name="Tech Art" to="/techart" />
+                        <NavLink name="Projects" to="/projects" />
                     </Navbar>
                     <Contacts />
                     <NavButton />

@@ -1,4 +1,50 @@
 {
+    "about": {
+        "name": "Kris",
+        "title": "Hi! I'm Kris",
+        "description": "I'm a developer who loves figuring out how things work under the hood and making them look cool on screen. Systems and graphics programming are my main playgrounds, but I hop into web dev when needed and enjoy connecting all the pieces into something that just feels right.",
+        "secondaryDescription": "When I'm not debugging code or optimizing performance, you'll find me exploring new technologies, contributing to open source projects, or sharing my knowledge with the developer community.",
+        "status": {
+            "text": "Available for opportunities",
+            "color": "green"
+        },
+        "currentFocus": {
+            "title": "Currently Working On",
+            "description": "Building high-performance applications and contributing to the developer ecosystem.",
+            "technologies": [
+                "Rust",
+                "WebGPU",
+                "Game Dev"
+            ]
+        },
+        "profilePicture": {
+            "src": "profilepic.png",
+            "alt": "Profile Picture",
+            "author": "@cherrymaru8",
+            "authorUrl": "https://x.com/cherrymaru8/status/1934601675773530524/photo/1",
+            "attribution": "Artwork by"
+        },
+        "socialLinks": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/krispy-snacc",
+                "description": "Check out my code",
+                "icon": "github"
+            },
+            {
+                "name": "Ko-fi",
+                "url": "https://ko-fi.com/krispysnacc",
+                "description": "Support my work",
+                "icon": "kofi"
+            },
+            {
+                "name": "Email",
+                "url": "mailto:krispysnacc@gmail.com",
+                "description": "Get in touch",
+                "icon": "email"
+            }
+        ]
+    },
     "techarts": [
         {
             "title": "Shader Experiment 1",
@@ -10,14 +56,18 @@
             "media": "https://compute.toys/embed/2386"
         }
     ],
-
     "projects": [
         {
             "title": "C++ Ray Tracer",
             "description": "A basic ray tracer built in C++, capable of rendering spheres with shadows, reflections, and diffuse lighting.",
             "img": "cpp-ray-tracer.png",
             "srcUrl": "https://github.com/krispy-snacc/cpp-ray-tracer",
-            "langs": [{ "name": "C++", "color": "#f34b7d" }]
+            "langs": [
+                {
+                    "name": "C++",
+                    "color": "#f34b7d"
+                }
+            ]
         },
         {
             "title": "effects-rs",
@@ -25,8 +75,14 @@
             "img": "effects-rs.png",
             "srcUrl": "https://github.com/krispy-snacc/effects-rs",
             "langs": [
-                { "name": "Rust", "color": "#dea584" },
-                { "name": "OpenCL", "color": "#edb44b" }
+                {
+                    "name": "Rust",
+                    "color": "#dea584"
+                },
+                {
+                    "name": "OpenCL",
+                    "color": "#edb44b"
+                }
             ]
         },
         {
@@ -35,8 +91,14 @@
             "img": "cpp-opengl-renderer.png",
             "srcUrl": "https://github.com/krispy-snacc/cpp-opengl-renderer",
             "langs": [
-                { "name": "C++", "color": "#f34b7d" },
-                { "name": "OpenGL", "color": "#5586A4" }
+                {
+                    "name": "C++",
+                    "color": "#f34b7d"
+                },
+                {
+                    "name": "OpenGL",
+                    "color": "#5586A4"
+                }
             ]
         },
         {
@@ -45,8 +107,14 @@
             "img": "crimbo.png",
             "srcUrl": "https://github.com/krispy-snacc/crimbo",
             "langs": [
-                { "name": "Python", "color": "#3776ab" },
-                { "name": "OpenCL", "color": "#edb44b" }
+                {
+                    "name": "Python",
+                    "color": "#3776ab"
+                },
+                {
+                    "name": "OpenCL",
+                    "color": "#edb44b"
+                }
             ]
         },
         {
@@ -54,21 +122,36 @@
             "description": "A BitTorrent client written in Go, implementing the protocol from scratch with support for peer discovery and file downloading.",
             "img": "go-bittorrent-client.png",
             "srcUrl": "https://github.com/krispy-snacc/go-bittorrent-client",
-            "langs": [{ "name": "Go", "color": "#00ADD8" }]
+            "langs": [
+                {
+                    "name": "Go",
+                    "color": "#00ADD8"
+                }
+            ]
         },
         {
             "title": "Nes-rs",
             "description": "A NES emulator written in Rust. It (will) include CPU, PPU, and APU emulation, with support for classic NES ROMs.",
             "img": "nes-rs.png",
             "srcUrl": "https://github.com/krispy-snacc/nes-rs",
-            "langs": [{ "name": "Rust", "color": "#dea584" }]
+            "langs": [
+                {
+                    "name": "Rust",
+                    "color": "#dea584"
+                }
+            ]
         },
         {
             "title": "Rust Web Server",
             "description": "A lightweight multithreaded HTTP web server written in Rust, built for learning systems-level and network programming.",
             "img": "rust-web-server.png",
             "srcUrl": "https://github.com/krispy-snacc/rust-web-server",
-            "langs": [{ "name": "Rust", "color": "#dea584" }]
+            "langs": [
+                {
+                    "name": "Rust",
+                    "color": "#dea584"
+                }
+            ]
         },
         {
             "title": "Personal Portfolio",
@@ -76,9 +159,18 @@
             "img": "personal-portfolio.png",
             "srcUrl": "https://github.com/krispy-snacc/portfolio-website",
             "langs": [
-                { "name": "TypeScript", "color": "#3178c6" },
-                { "name": "React", "color": "#61dafb" },
-                { "name": "Tailwind CSS", "color": "#38bdf8" }
+                {
+                    "name": "TypeScript",
+                    "color": "#3178c6"
+                },
+                {
+                    "name": "React",
+                    "color": "#61dafb"
+                },
+                {
+                    "name": "Tailwind CSS",
+                    "color": "#38bdf8"
+                }
             ]
         }
     ]
