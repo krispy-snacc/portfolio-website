@@ -209,7 +209,7 @@ const SlidePanel = () => {
     const { isOpen } = useSlidePanel();
     return (
         <motion.div
-            className="w-screen h-screen fixed z-2 top-0 left-0 bg-black"
+            className="w-screen h-[100dvh] fixed z-2 top-0 left-0 bg-black"
             initial={{ x: "0%", y: "-100%" }}
             animate={{ y: isOpen ? "0%" : "-100%" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}

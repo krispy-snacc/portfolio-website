@@ -16,7 +16,7 @@ const TechArtCard = ({ title, media, srcUrl }: TechArtData) => {
 
     // const imgSrc = `${import.meta.env.BASE_URL}project-icons/${img}`;
     return (
-        <div className="overflow-clip h-full w-[420px] border-[1px] border-white/20 transition-colors duration-200 hover:border-white/50 bg-black/40 flex flex-col rounded-lg">
+        <div className="overflow-clip h-full lg:max-w-[420px] w-full border-[1px] border-white/20 transition-colors duration-200 hover:border-white/50 bg-black/40 flex flex-col rounded-lg">
             <div className="relative overflow-hidden w-full aspect-[16/9] xl:h-auto border-b xl:border-r border-white/20 border-[1px]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#252525] to-[#171717]" />
 
